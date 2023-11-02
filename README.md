@@ -1,11 +1,11 @@
 # mapeando-quilombos-e2e-cypress
 🔍 **Sumary**
-- [Aviasales](#aviasales)
+- [Mapeando Quilombos](#Mapeando-Quilombos)
   - [E2E Tests](#testes-e2e)
     - [Project Structure](#estrutura-do-projeto)
-    - [Tech Stack](#tech-stack)
-    - [Build](#build)
-    - [How to run the tests](#how-to-run-the-tests)
+    - [Tech Stack](#Tech-Stack)
+    - [Build](#Build)
+    - [How to run the tests](#How-to-run-the-tests)
     - [Test Scenarios](#Test_Scenarios)
       
 ---
@@ -53,9 +53,8 @@ Tests are written in JavaScrip with Cypress framework [Cypress](https://www.cypr
 
 ### Test Scenarios
 
-
-
 ### Login tests
+```diff
   User can log in successfully
       Given I am in the homepage
       When I click in the menu Login and add valid credentials
@@ -65,9 +64,24 @@ Tests are written in JavaScrip with Cypress framework [Cypress](https://www.cypr
       Given I am in the homepage
       When I click in the menu Login and add Incorrect credentials
       Then user should not be redirected and see an error message
-
+```
 ### Gestão de Conteúdo tests
+
+```diff
   User should see a list of Territory successfully
         Given I am in the logged area
         When I click in the menu Gestao de Conteúdo
         Then I can see a list of territóries
+
+  Should create a Territory successfully
+        Given I am in the logged area
+        When I click in the menu Gestao de Conteúdo
+        And Add a new territory
+        Then I should see a success message and be redirected to the list of territory
+
+  Should delete a Territory successfully
+        Given I am in the logged area
+        When I click in the menu Gestao de Conteúdo
+        And delete a territory
+        Then I should see a success message
+```
