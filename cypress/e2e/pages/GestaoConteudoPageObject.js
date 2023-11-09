@@ -6,7 +6,7 @@ const GestaoConteudoageObject = function () {
     this.header = ".header"
     this.nomeTerritório = '.nome'
     this.deleteButton = '[aria-label="Deletar Quilombo for testing"]'
-    this.editButton = "button[aria-label='Editar Quilombo da Família Silva']"
+    this.editButton = "button[aria-label='Editar Quilombo dos Alpes']"
     this.adicionarButton = "a[href='/cadastro']"
     this.listOfTerritory = "article"
     this.alert = '[role="alert"]'
@@ -15,7 +15,7 @@ const GestaoConteudoageObject = function () {
         cy.get(this.header).should('contain', 'Lista de Territorios Quilombolas');
         cy.get(this.listOfTerritory).should('have.length.above', 0);
         cy.get('.nome', { timeout: 10000 }).should('exist');
-        cy.get(this.nomeTerritório).should('contain', 'Quilombo da Família Silva');
+        cy.get(this.nomeTerritório).should('contain', 'Quilombo dos Alpes');
         cy.get(this.editButton, { timeout: 10000 }).should('exist')
         cy.get(this.adicionarButton, { timeout: 10000 }).should('exist');
     }

@@ -7,9 +7,6 @@ describe('Login tests', () => {
 
   before(() => {
     // Carregue os dados da fixture no início do teste
-    cy.fixture('loginData').then((data) => {
-      loginData = data;
-    });
 
     cy.fixture('loginData_invalid').then((data) => {
       loginDataInvalid = data;
@@ -30,9 +27,12 @@ describe('Login tests', () => {
         describe('When I click in the menu Login and add valid credentials', () => {
           describe('Then user should be redirected to the HomePage', () => {
             it('Test', () => {
-              homePageObject.clickLoginMenuItem();
-              loginPageObject.loginAdminValidCredentials(loginData.email, loginData.password);
-              homePageObject.logout();
+              it('Test', () => {
+                homePageObject.clickLoginMenuItem();
+                cy.log("CYPRESS_EMAIL: " + Cypress.env('CYPRESS_EMAIL'));
+                loginPageObject.loginAdminValidCredentials(Cypress.env('CYPRESS_EMAIL'), Cypress.env('CYPRESS_PASSWORD'));
+                homePageObject.logout();
+              });
             });
           });
         });

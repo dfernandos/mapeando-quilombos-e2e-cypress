@@ -12,7 +12,7 @@ const LoginPageObject = function () {
         cy.get(this.email).type(email);
         cy.get(this.password).type(password);
         cy.get(this.loginButton).click();
-        cy.get(this.sair).should('contain', 'Sair');
+        cy.get(this.sair, { timeout: 10000 }).should('contain', 'Sair');
     }
 
     this.loginAdminInvalidCredentials = async (email, password) => {

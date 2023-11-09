@@ -8,5 +8,8 @@ module.exports = defineConfig({
     baseUrl: 'https://mapeando-quilombos.netlify.app/',
     browser: "chrome",
     chromeWebSecurity: false
+
+    
   },
 });
+
