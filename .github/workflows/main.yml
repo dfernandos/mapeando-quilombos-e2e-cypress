@@ -1,0 +1,31 @@
+name: Testes Cypress
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  test-cypress:
+    runs-on: ubuntu-latest
+
+    env:
+      CYPRESS_EMAIL: ${{ secrets.CYPRESS_EMAIL }}
+      CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
+      CYPRESS_EMAIL_ADMIN: ${{ secrets.CYPRESS_EMAIL_ADMIN }}
+      CYPRESS_PASSWORD_ADMIN: ${{ secrets.CYPRESS_PASSWORD_ADMIN }}
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar Cypress
+        run: npm run cypress:run
