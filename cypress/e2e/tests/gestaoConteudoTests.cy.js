@@ -19,7 +19,8 @@ describe('Gestão de Conteúdo', () => {
     cy.viewport(1524, 900);
     cy.visit('/');
     homePageObject.clickLoginMenuItem();
-
+    loginPageObject.loginAdminValidCredentials(Cypress.env('CYPRESS_EMAIL_ADMIN'), Cypress.env('CYPRESS_PASSWORD_ADMIN'));
+    homePageObject.clickGestaoConteudiMenuItem();
   });
 
   afterEach(() => {
@@ -29,8 +30,6 @@ describe('Gestão de Conteúdo', () => {
   describe('Gestão de Conteúdo tests', () => {
     describe('User should see a list of Territory', () => {
       it('Test', () => {
-        loginPageObject.loginAdminValidCredentials(Cypress.env('CYPRESS_EMAIL_ADMIN'), Cypress.env('CYPRESS_PASSWORD_ADMIN'));
-        homePageObject.clickGestaoConteudiMenuItem();
         GestaoConteudoPageObject.userCanCheckTheListOfTerritory();
       });
     });
