@@ -28,7 +28,7 @@ this.clickGestaoConteudiMenuItem = async () => {
 }
 
 this.logout = async () =>{
-    cy.get(this.sair).click();
+    cy.get(this.sair, { timeout: 10000 }).click();
 }
 
 
