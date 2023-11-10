@@ -24,7 +24,7 @@ Este projeto foi criado para a disciplina de Trabalho de Conclusão II para a ob
 
 ## E2E Tests
 
-Tests are written in JavaScrip with Cypress framework [Cypress](https://www.cypress.io/).
+Tests are written in JavaScript with Cypress framework [Cypress](https://www.cypress.io/).
 
 ### Project Structure
 
