@@ -23,9 +23,9 @@ describe('Gestão de Conteúdo', () => {
     homePageObject.clickGestaoConteudiMenuItem();
   });
 
-  // afterEach(() => {
-  //   homePageObject.logout();
-  // });
+  afterEach(() => {
+    homePageObject.logout();
+  });
 
   describe('Gestão de Conteúdo tests', () => {
     describe('User should see a list of Territory', () => {
@@ -51,9 +51,4 @@ describe('Gestão de Conteúdo', () => {
     });
   });
 
-  describe('Should delete a Territory successfully', () => {
-    it('Test', () => {
-      GestaoConteudoPageObject.deleteATerritory();
-    });
-  });
 });
