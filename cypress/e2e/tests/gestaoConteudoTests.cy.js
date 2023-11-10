@@ -22,9 +22,9 @@ describe('Gestão de Conteúdo', () => {
 
   });
 
-  // afterEach(() => {
-  //   homePageObject.logout();
-  // });
+  afterEach(() => {
+    homePageObject.logout();
+  });
 
   describe('Gestão de Conteúdo tests', () => {
     describe('User should see a list of Territory', () => {
