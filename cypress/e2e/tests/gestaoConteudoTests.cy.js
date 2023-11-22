@@ -51,4 +51,10 @@ describe('Gestão de Conteúdo', () => {
     });
   });
 
+  describe('Should delete a Territory successfully', () => {
+    it('Test', () => {
+      GestaoConteudoPageObject.deleteATerritory();
+    });
+  });
+
 });
