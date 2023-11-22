@@ -68,7 +68,7 @@ Tests are written in JavaScript with Cypress framework [Cypress](https://www.cyp
       When I click in the menu Login and add valid credentials
       Then user should be redirected to the HomePage
 
-  User can log in with incorrect credentials
+  User can NOT log in with incorrect credentials
       Given I am in the homepage
       When I click in the menu Login and add Incorrect credentials
       Then user should not be redirected and see an error message
